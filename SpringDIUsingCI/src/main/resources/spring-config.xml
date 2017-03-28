@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="outputData" class="com.springDI.helper.OutputHelper">
+		<constructor-arg ref="jsonOutput">
+		</constructor-arg>
+	</bean>
+	
+	<bean id="jsonOutput" class="com.springDI.businessImpl.JsonOutputGenerator"></bean>
+	<bean id="xmlOutput" class="com.springDI.businessImpl.XmlOutputGenerator"></bean>
+</beans>
+	

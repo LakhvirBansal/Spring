@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean id="outputdata" class="com.spring.helper.OutputHelper">
+	<property name="generateOutput" ref="jsonOutputGenerator"></property>
+</bean>
+
+<bean id="csvOutputGenerator" class="com.spring.main.CSVOutputGenerator"></bean>
+<bean id="jsonOutputGenerator" class="com.spring.main.JsonOutputGenerator"></bean>
+</beans>
